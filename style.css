@@ -1,0 +1,53 @@
+:root {
+    --border-radius: 50%;
+    --border: dotted white;
+    --position-center: 
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center-image {
+  /* bg center bolno */
+  background: var(--image-url) center/cover no-repeat;
+}
+.center-position {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.solar-system {
+  width: 900px;
+  height: 900px;
+  position: relative;
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+}
+
+.orbit {
+  border-radius: 50%;
+  width: var(--orbit);
+  height: var(--orbit);
+  border: 1px dashed white;
+  animation: orbit var(--orbit-period) infinite linear;
+}
+
+.planet {
+  top: 0;
+  width: var(--planet);
+  height: var(--planet);
+  animation: orbit var(--rotation-period) infinite linear;
+}
