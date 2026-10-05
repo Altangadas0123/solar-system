@@ -10,13 +10,13 @@
   box-sizing: border-box;
 }
 body {
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .center-image {
-  /* bg center bolno */
   background: var(--image-url) center/cover no-repeat;
 }
 .center-position {
@@ -50,4 +50,13 @@ body {
   width: var(--planet);
   height: var(--planet);
   animation: orbit var(--rotation-period) infinite linear;
+}
+
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
